@@ -5,8 +5,8 @@ def inv_dict(d):
 		inv[v] = k
 	return inv
 
-fb = ','.join(str(i) for i in input())  # input liter equals encoding to cb
-cb = ','.join(str(i) for i in input())  # code cipher for fb
+fb = ','.join(str(i) for i in input())  #  input liter that must be equal to encode liter in cb
+cb = ','.join(str(i) for i in input())  #  cipher code for fb
 work_fb = ','.join(str(i) for i in input())  # encode
 work_cb = ','.join(str(i) for i in input())  # decode
 temp = []
