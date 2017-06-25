@@ -9,6 +9,4 @@ for i in x:
 		y_temp -= int(i[1])
 	if i[0] == 'восток':
 		x_temp += int(i[1])
-
-xy = [x_temp, y_temp]
-print(*xy)
+print(x_temp, y_temp)
