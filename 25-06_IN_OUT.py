@@ -5,5 +5,4 @@ read_inp = inp.read().lower().split()
 for i in read_inp:
 	c[i] += 1
 ans = tuple(*(c.most_common(1)))
-print(read_inp)
 print(*ans)
