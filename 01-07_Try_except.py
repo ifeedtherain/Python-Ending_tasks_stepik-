@@ -5,7 +5,7 @@ class NonPositiveError(Exception):
 class PositiveList(list):
 	def append(self, x):
 		if x <= 0:
-				raise NonPositiveError("Nope")
+			raise NonPositiveError("Nope")
 		else:
 			super(PositiveList, self).append(x)
 			self.append(x)
