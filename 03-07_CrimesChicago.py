@@ -1,6 +1,5 @@
 import csv
 
-crime = []
 ans = dict()
 with open('Crimes.csv') as f:
     data = csv.DictReader(f)
