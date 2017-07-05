@@ -30,7 +30,7 @@ for i in lst:
     j = json.loads(r.content.decode('utf-8'))
     ans[j['sortable_name']] = j['birthday']
 
-fin = sorted(ans.items(), key = lambda x: (x[1], x[0]))
+fin = sorted(ans.items(), key=lambda x:(x[1], x[0]))
 
 with open('res.txt', 'w', encoding= 'utf-8') as f:
     for k in fin:
