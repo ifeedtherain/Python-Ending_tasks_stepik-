@@ -23,11 +23,9 @@ headers = {"X-Xapp-Token" : token}
 
 with open ('dataset_24476_4.txt', 'r', encoding='utf-8') as r:
     lst = r.readlines()
-    
+
 for i in lst:
-    artist = i.rstrip()
-    print(artist)
-    url = "https://api.artsy.net/api/artists/"+ artist
+    url = "https://api.artsy.net/api/artists/"+ i.rstrip()  # i == artist
     r = requests.get(url, headers=headers)
     j = json.loads(r.content.decode('utf-8'))
     ans[j['sortable_name']] = j['birthday']
