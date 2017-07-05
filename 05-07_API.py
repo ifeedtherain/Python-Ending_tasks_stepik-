@@ -1,5 +1,6 @@
 import requests
 import json
+
 ans = dict()
 client_id = 'c98a26e74171f1d73c50'
 client_secret = '6c2512c7f6c30c2e2c0251a33278b678'
@@ -22,7 +23,7 @@ headers = {"X-Xapp-Token" : token}
 
 with open ('dataset_24476_4.txt', 'r', encoding='utf-8') as r:
     lst = r.readlines()
-    print(lst)
+    
 for i in lst:
     artist = i.rstrip()
     print(artist)
@@ -32,7 +33,7 @@ for i in lst:
     ans[j['sortable_name']] = j['birthday']
 
 fin = sorted(ans.items(), key = lambda x: (x[1], x[0]))
-print(fin)
+
 with open('res.txt', 'w', encoding= 'utf-8') as f:
     for k in fin:
         print(k[0])
