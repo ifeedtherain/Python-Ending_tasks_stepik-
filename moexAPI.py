@@ -5,7 +5,7 @@ import json
 
 mliquid = dict()
 
-url = 'http://moex.com/iss/downloads/statistics/engines/stock/monthly/latest.json.zip'
+url = 'http://moex.com/iss/downloads/statistics/engines/stock/monthly/latest.json.zip' # необходимо в JSON добавить в конец ] к ]}
 res = requests.get(url)
 
 z = zipfile.ZipFile(io.BytesIO(res.content))
